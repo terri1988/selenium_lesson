@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--通过‘method’并发，线程数是3，3个线程同时运行-->
+<suite name="Default Suite" parallel="methods" thread-count="3">
+    <!--    项目名称-->
+    <test name="SeleniumIDEA">
+        <classes>
+            <!--    class name-->
+            <class name="com.meyoung.day1.TestNGDemo1">
+                <!--  要运行的方法名   -->
+                <methods>
+                    <include name="testCase1"/>
+                    <exclude name="testCase2"/>
+                </methods>
+            </class>
+<!--            并发多个class一起运行-->
+            <class name="com.meyoung.day1.TestNGDemo2">
+
+            </class>
+        </classes>
+    </test>
+</suite> <!-- Default Suite -->
